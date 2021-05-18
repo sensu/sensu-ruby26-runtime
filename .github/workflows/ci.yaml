@@ -24,6 +24,7 @@ jobs:
       env: 
         TAG: ${{ steps.get_version.outputs.VERSION }}
         REPO_SLUG: ${{ github.repository }}  
+        DOCKER_PREFIX: sensu/sensu-ruby-runtime
         DOCKER_USER: ${{ secrets.DOCKER_USER }}
         DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}  
       run: ./build_scripts/build_alpine_platforms.sh
@@ -32,6 +33,7 @@ jobs:
       env: 
         TAG: ${{ steps.get_version.outputs.VERSION }}
         REPO_SLUG: ${{ github.repository }}  
+        DOCKER_PREFIX: sensu/sensu-ruby-runtime
         DOCKER_USER: ${{ secrets.DOCKER_USER }}
         DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}  
       run: ./build_scripts/build_amazon_platforms.sh
@@ -40,6 +42,7 @@ jobs:
       env: 
         TAG: ${{ steps.get_version.outputs.VERSION }}
         REPO_SLUG: ${{ github.repository }}  
+        DOCKER_PREFIX: sensu/sensu-ruby-runtime
         DOCKER_USER: ${{ secrets.DOCKER_USER }}
         DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}  
       run: ./build_scripts/build_debian_platforms.sh
@@ -48,6 +51,7 @@ jobs:
       env: 
         TAG: ${{ steps.get_version.outputs.VERSION }}
         REPO_SLUG: ${{ github.repository }}  
+        DOCKER_PREFIX: sensu/sensu-ruby-runtime
         DOCKER_USER: ${{ secrets.DOCKER_USER }}
         DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}  
       run: ./build_scripts/build_centos_platforms.sh

@@ -60,7 +60,7 @@ if [ -z "$DOCKER_PASSWORD" ]; then
 	exit 1
 fi
 
-docker_asset=${REPO_SLUG}-${ruby_version}-${platform}:${asset_version}
+docker_asset=${DOCKER_PREFIX}-${ruby_version}-${platform}:${asset_version}
 
 echo "Docker Hub Asset: ${docker_asset}"
 
@@ -74,7 +74,7 @@ prefix=${ver%-*}
 prerel=${ver/#$prefix}
 if [ -z "$prerel" ]; then 
   echo "tagging as latest asset"
-  latest_asset=${REPO_SLUG}-${ruby_version}-${platform}:latest
+  latest_asset=${DOCKER_PREFIX}-${ruby_version}-${platform}:latest
   docker tag ${asset_image} ${latest_asset}
   docker push ${latest_asset}
 fi
