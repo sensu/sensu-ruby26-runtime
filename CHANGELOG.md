@@ -6,24 +6,10 @@ and this project adheres to [Semantic
 Versioning](http://semver.org/spec/v2.0.0.html).
 
 ## Unreleased
-## [0.0.11] - 2020-09-17
-
-### Added
-- Add Centos8 build
-
 ### Fixed
-- add libc6-compat libraries to Alpine builds
-- add sys-filesystem gem based test 
+- update .bonsai.yml to use explicit tarball asset names instead of '#{repo}'
 
-## [0.0.4] - 2019-01-16
-
-### Fixed
-- Debian asset platform name (static, removed os-release detection)
-
-### Added
-- CentOS and Debian Bonsai assets
-
-## [0.0.3] - 2019-01-16
+## [0.1.0] - 2021-05-16
 
 ### Added
 - Initial release
